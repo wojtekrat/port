@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { Canvas } from '@react-three/fiber'
-import Blob from '../components/hero/Blob'
+import Blob from '../hero/Blob'
 
 const Hero = ({ text, text1 }) => {
   return (
@@ -22,7 +22,7 @@ const Hero = ({ text, text1 }) => {
         </div>
         <div className='w-[400px] h-[400px] md:w-[600px] md:h-[600px] ml-[50px]'>
           <Canvas  camera={{ position: [0.0, 0.0, 8.0]}}>
-            <Blob/>
+            <Blob />
           </Canvas>
         </div>
       </div>   

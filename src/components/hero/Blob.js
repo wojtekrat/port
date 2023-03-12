@@ -1,6 +1,6 @@
 import React, { useMemo, useRef } from "react";
-import vertexShader from "../components/hero/vertexShader";
-import fragmentShader from "../components/hero/fragmentShader";
+import vertexShader from '../hero/vertexShader'
+import fragmentShader from "../hero/fragmentShader";
 import { useFrame } from "@react-three/fiber";
 import { MathUtils } from "three";
 

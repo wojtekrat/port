@@ -8,7 +8,7 @@ import Experience from './Experience'
 
 const AboutMe = ({ text, image, skills, experience }) => {  
   return (  
-    <div className='w-[70%] m-auto flex flex-col'>
+    <div className='w-[90%] md:w-[70%] m-auto flex flex-col'>
       <motion.div animate={{
         y:[-100, 0],
         }}
@@ -17,9 +17,9 @@ const AboutMe = ({ text, image, skills, experience }) => {
           ease: "easeInOut",
         }}  
         className='flex flex-col lg:flex-row p-[20px] lg:p-[50px] bg-gradient-to-r from-green-900 via-green-700 to-green-900 min-h-[300px] rounded-b-3xl border-t-[2px] border-stone-700'>
-        <div className='flex flex-col md:flex-row m-auto'>
+        <div className='flex flex-col items-center md:flex-row m-auto  '>
 
-          <Image className='rounded-full border-[2px] border-white h-[250px] w-[250px] ring-2' height={300} width={300} alt="my pic" src={urlFor(image).url()} />
+          <Image className='rounded-full border-[2px] border-white h-[200px] w-[200px] md:h-[250px] md:w-[250px] ring-2 mb-[10px] sm:mb-[0px]' height={300} width={300} alt="my pic" src={urlFor(image).url()} />
           <div className='pl-[20px]'>
             <motion.div animate={{
               x:[400, 0],
@@ -28,7 +28,7 @@ const AboutMe = ({ text, image, skills, experience }) => {
             transition={{
               duration: 2,
             }}
-            className=' text-[30px] font-bold'>
+            className='text-[24px] md:text-[30px] font-bold'>
               About me
             </motion.div>
             <motion.div animate={{
@@ -39,7 +39,7 @@ const AboutMe = ({ text, image, skills, experience }) => {
               opacity:0,
               duration: 2,
             }}
-            className='text-[17px]'>
+            className='text-[14px] md:text-[17px]'>
               {text}
             </motion.div>
           </div>

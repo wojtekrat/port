@@ -12,7 +12,6 @@ export default function RootLayout({ children }) {
           <header>
             <Navbar />
           </header>
-            <Socials />
             {children}
         </body>
     </html>

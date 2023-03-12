@@ -10,7 +10,7 @@ const SkillBox = ({ skills: { skillimage }}) => {
     return Math.floor(Math.random() * x)
   }
   return (
-    <div className='p-5 h-[150px] w-[150px] bg-neutral-800 m-[5px] rounded-2xl'> 
+    <div className='p-5 sm:h-[150px] sm:w-[150px] bg-neutral-800 m-[5px] rounded-2xl'> 
       <motion.div animate={{
         opacity: [0, 1],
         y:[randomInt(300), 0],

@@ -20,8 +20,8 @@ const ProjectSection = ({projects}) => {
             transition={{
               duration: 1.5
             }}
-            className='text-[26px] lg:text-[38px] font-bold'>Projects</motion.div>
-            <div className='text-[16px] shadow-sm flex lg:w-[700px] flex-wrap'>Following projects showcases my skills and experience through real-world examples of my work. Each project is briefly described with live demos. It shows my ability to solve problems and work with different technologies.</div>
+            className='text-[24px] sm:text-[26px] lg:text-[38px] font-bold'>Projects</motion.div>
+            <div className='text-[14px] sm:text-[16px] shadow-sm flex lg:w-[700px] flex-wrap'>Following projects showcases my skills and experience through real-world examples of my work. Each project is briefly described with live demos. It shows my ability to solve problems and work with different technologies.</div>
         </motion.div>
         <motion.div animate={{
           opacity: [0, 1],

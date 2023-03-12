@@ -8,7 +8,7 @@ import { motion } from 'framer-motion'
 const ProjectDetails = ({ project }) => {
     const tags = project.tag.split(" ")
   return (
-    <div className='flex items-center justify-center w-[70%] m-auto'>
+    <div className='flex items-center justify-center w-[90%] md:w-[70%] m-auto'>
       <motion.div animate={{
         scale:[0.8, 1], 
       }}

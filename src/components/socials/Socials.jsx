@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 const Socials = () => {
   return (
-    <div className='absolute top-0 left-0 w-14 h-fit z-10 flex flex-row'>
+    <div className='w-14 h-fit z-10 flex'>
         <Link href='https://www.facebook.com/wojciacho.jajczak/'><div className={SocialsIcon({ size: 'md', color: 'primary' })}><CiFacebook/></div></Link>
         <Link href='https://github.com/wojtekrat'><div className={SocialsIcon({ size: 'md', color: 'primary' })}><AiFillGithub/></div></Link>
         <Link href='https://www.linkedin.com/in/wojciechratajczakk/'><div className={SocialsIcon({ size: 'md', color: 'primary' })}><TiSocialLinkedinCircular/></div></Link>

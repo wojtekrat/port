@@ -21,7 +21,7 @@ const Map = () => {
     ariaLabel="three-circles-rotating"
   /></div>
   return (
-    <motion.div className='mt-[20px] md:mt-[0px] sm:ml-[20px] pb-[50px] ' animate={{
+    <motion.div className='mt-[20px] sm:ml-[20px] pb-[50px] ' animate={{
       x: [300, 0],
       opacity: [0,1]
           }}

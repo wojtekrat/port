@@ -23,7 +23,7 @@ const Hero = ({ text, text1 }) => {
             <Socials/>
           </div>
         </div>
-        <div className='w-[400px] h-[400px] md:w-[600px] md:h-[600px] md:ml-[50px]'>
+        <div className='w-[400px] h-[400px] md:w-[600px] md:h-[600px] lg:ml-[200px]'>
           <Canvas  camera={{ position: [0.0, 0.0, 8.0]}}>
             <Blob />
           </Canvas>

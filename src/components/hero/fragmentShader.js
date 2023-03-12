@@ -10,7 +10,6 @@ void main() {
         mix(vec3(22.0, 101.0, 52.0) / 255.0, vec3(22.0, 163.0, 74.0) / 255.0, abs(vUv.y - 0.5) * 5.0),
         abs(vUv.y - 0.8) * 5.0
     );
-    color = mix(color, vec3(0.0), abs(vUv.x - 0.5) * 2.0); // add black stripes
     gl_FragColor = vec4(color, 1.0);
 }
 `;

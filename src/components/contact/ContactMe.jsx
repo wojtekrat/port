@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser'
 import Map from '../../components/contact/Map'
 import BoxAnimation from '../../components/contact/BoxAnimation'
+import Socials from '../socials/Socials';
 
 const ContactMe = () => {
 
@@ -48,7 +49,7 @@ const ContactMe = () => {
 
   return (
     <div><BoxAnimation/>
-    <div className='m-auto w-[100%] sm:w-[80%] mt-[20px] md:mt-[50px] flex md:flex-row flex-wrap items-center justify-center '>
+    <div className='m-auto w-[100%] sm:w-[80%] mt-[20px] md:mt-[30px] flex md:flex-row flex-wrap items-center justify-center '>
         <motion.div animate={{
             y: [-150, 0],
             opacity: [0,1]
@@ -57,7 +58,7 @@ const ContactMe = () => {
             duration: 2,
             ease: "easeInOut"
         }}
-        className='bg-neutral-800 h-fit w-fit p-5 rounded-xl z-8 mb-[20px] sm:mb-[0px] relative'>
+        className='bg-neutral-800 h-fit w-fit p-5 rounded-xl z-8 sm:mb-[0px] relative'>
                 <div className='text-[30px] md:text-[50px]'>
                     Contact me.
                 </div>
@@ -78,6 +79,10 @@ const ContactMe = () => {
                 </div>
             </motion.div>
             <Map/>
+
+    </div>
+    <div className='w-[100%] flex justify-center items-center ml-[-50px]'>
+        <Socials/>
     </div>
     </div>
   )

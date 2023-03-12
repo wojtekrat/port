@@ -21,7 +21,7 @@ const Map = () => {
     ariaLabel="three-circles-rotating"
   /></div>
   return (
-    <motion.div className='mt-[20px] sm:ml-[20px] pb-[50px] ' animate={{
+    <motion.div className='mt-[45px] sm:ml-[20px] pb-[50px] ' animate={{
       x: [300, 0],
       opacity: [0,1]
           }}
@@ -29,7 +29,7 @@ const Map = () => {
       duration: 2,
       ease: "easeInOut"
   }}>
-        <GoogleMap options={mapOptions} mapContainerClassName='w-[350px] h-[350px] md:w-[700px] md:h-[550px] rounded-xl'></GoogleMap>
+        <GoogleMap options={mapOptions} mapContainerClassName='w-[350px] h-[350px] sm:w-[500px] sm:h-[500[px] lg:w-[700px] lg:h-[550px] rounded-xl'></GoogleMap>
     </motion.div>
   )
 }

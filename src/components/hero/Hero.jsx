@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { Canvas } from '@react-three/fiber'
-import Blob from '../components/Blob'
+import Blob from '../components/hero/Blob'
 
 const Hero = ({ text, text1 }) => {
   return (

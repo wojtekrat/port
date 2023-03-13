@@ -4,7 +4,7 @@ import ProjectCard from '../../components/projects/ProjectCard'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
-const ProjectSection = ({projects}) => {
+const ProjectSection = ({ projects }) => {
   return (
     <div>
         <motion.div animate={{

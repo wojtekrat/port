@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 
 const Map = () => {
-  console.log(process.env.NEXT_PUBLIC_GOOGLE_MAP_API)
+  const center = useMemo(() => ({ lat: 51.107883, lng: 17.038538}), [])
     const { isLoaded } = useLoadScript({ googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAP_API})
     const mapOptions = {
         center: { lat: 51.107870, lng: 17.038638 },
@@ -21,7 +21,7 @@ const Map = () => {
     ariaLabel="three-circles-rotating"
   /></div>
   return (
-    <motion.div className='mt-[45px] sm:ml-[20px] pb-[50px] ' animate={{
+    <motion.div className='mt-[10px] md:mt-[50px] sm:ml-[20px] pb-[50px] ' animate={{
       x: [300, 0],
       opacity: [0,1]
           }}
@@ -29,7 +29,9 @@ const Map = () => {
       duration: 2,
       ease: "easeInOut"
   }}>
-        <GoogleMap options={mapOptions} mapContainerClassName='w-[350px] h-[350px] sm:w-[500px] sm:h-[500[px] lg:w-[700px] lg:h-[550px] rounded-xl'></GoogleMap>
+        <GoogleMap options={mapOptions} mapContainerClassName='w-[350px] h-[350px] sm:w-[500px] sm:h-[500[px] lg:w-[700px] lg:h-[540px] rounded-xl'>
+          <Marker position={center}/>
+        </GoogleMap>
     </motion.div>
   )
 }

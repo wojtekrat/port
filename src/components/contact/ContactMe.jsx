@@ -59,7 +59,7 @@ const ContactMe = () => {
             ease: "easeInOut"
         }}
         className='bg-neutral-800 h-fit w-fit p-5 rounded-xl z-8 sm:mb-[0px] relative'>
-                <div className='text-[30px] md:text-[50px]'>
+                <div className='text-[30px] md:text-[40px]'>
                     Contact me.
                 </div>
                 <div>

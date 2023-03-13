@@ -21,6 +21,7 @@ export default async function About() {
   const { text, myimage } = await getAboutme()
   const skills = await getSkills()
   const experience = await getExperience()
+  experience.reverse()
   return (
     <AboutMe text={text} image={myimage} skills={skills} experience={experience} />
   )

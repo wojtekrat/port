@@ -13,14 +13,14 @@ const ProjectSection = ({projects}) => {
           transition={{
             duration: 1.5,
             ease: "easeInOut",
-          }} className='bg-gradient-to-r from-green-900 via-stone-900 to-zinc-900   lg:pl-[200px] pt-[20px] pb-[20px] pl-[10px] flex flex-col border-t-[2px] border-stone-800'>
+          }} className='bg-gradient-to-r from-green-900 via-stone-900 to-zinc-900 lg:pl-[200px] pt-[20px] pb-[20px] pl-[10px] flex flex-col border-t-[2px] border-stone-800'>
             <motion.div animate={{
               y:[-100,0]
             }}
             transition={{
               duration: 1.5
             }}
-            className='text-[24px] sm:text-[26px] lg:text-[38px] font-bold'>Projects</motion.div>
+            className='text-[24px] sm:text-[26px] lg:text-[32px] font-bold underline decoration-stone-300'>Projects</motion.div>
             <div className='text-[14px] sm:text-[16px] shadow-sm flex lg:w-[700px] flex-wrap'>Following projects showcases my skills and experience through real-world examples of my work. Each project is briefly described with live demos. It shows my ability to solve problems and work with different technologies.</div>
         </motion.div>
         <motion.div animate={{

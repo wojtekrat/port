@@ -7,6 +7,7 @@ import { motion } from 'framer-motion'
 import Experience from './Experience'
 
 const AboutMe = ({ text, image, skills, experience }) => {  
+  const resume = 'DOWNLOAD MY RESUME'
   return (  
     <div className='w-[90%] md:w-[70%] m-auto flex flex-col'>
       <motion.div animate={{
@@ -18,7 +19,6 @@ const AboutMe = ({ text, image, skills, experience }) => {
         }}  
         className='flex flex-col lg:flex-row p-[20px] lg:p-[50px] bg-gradient-to-r from-green-900 via-green-700 to-green-900 min-h-[300px] rounded-b-3xl border-t-[2px] border-stone-700'>
         <div className='flex flex-col items-center md:flex-row m-auto  '>
-
           <Image className='rounded-full border-[2px] border-white h-[200px] w-[200px] md:h-[250px] md:w-[250px] ring-2 mb-[10px] sm:mb-[0px]' height={300} width={300} alt="my pic" src={urlFor(image).url()} />
           <div className='pl-[20px]'>
             <motion.div animate={{
@@ -28,7 +28,7 @@ const AboutMe = ({ text, image, skills, experience }) => {
             transition={{
               duration: 2,
             }}
-            className='text-[24px] md:text-[30px] font-bold'>
+            className='text-[24px] md:text-[30px] font-bold underline decoration-stone-300'>
               About me
             </motion.div>
             <motion.div animate={{
@@ -41,6 +41,11 @@ const AboutMe = ({ text, image, skills, experience }) => {
             }}
             className='text-[14px] md:text-[17px]'>
               {text}
+              <div className='mt-[10px]'>
+              <div className='bg-stone-500 p-[8px] w-fit m-auto rounded-xl cursor-pointer hover:bg-neutral-500 text-[13px] font-semibold'>
+                {resume}
+              </div>
+            </div>
             </motion.div>
           </div>
         </div>
@@ -53,9 +58,9 @@ const AboutMe = ({ text, image, skills, experience }) => {
             duration: 1,
             ease: "easeInOut",
           }}>
-            <div>
-          My experience
-          </div>
+            <div className='font-semibold'>
+              My experience
+            </div>
           <div className='mt-[20px]'>
           {experience.map((e) => (<Experience key={e.date} experience={e} />))}
           </div>
@@ -68,7 +73,7 @@ const AboutMe = ({ text, image, skills, experience }) => {
             duration: 1,
             ease: "easeInOut",
           }}>
-          <div className='text-[20px] font-bold mb-[10px] '>
+          <div className='text-[20px] font-semibold mb-[10px] '>
             My skillset
           </div>
           <div className='flex flex-row flex-wrap items-center justify-center'>

@@ -9,6 +9,7 @@ async function getProjects() {
 
 export default async function Projects() {
   const projects = await getProjects()
+  projects.reverse()
   return (
     <div>
       <ProjectSection projects={projects}/>

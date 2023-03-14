@@ -55,7 +55,7 @@ const AboutMe = ({ text, image, skills, experience }) => {
               {text}
               <div className='mt-[10px]'>
                 <div className='bg-stone-500 p-[8px] w-fit m-auto rounded-xl cursor-pointer hover:bg-neutral-500 text-[13px] font-semibold'>
-                  <a href='https://drive.google.com/file/d/1VPcU0fZP7HU2l6ltD3VcL_JF-Jzi9DoA/view?usp=share_link' download>{resume}</a>
+                  <a href='https://drive.google.com/file/d/1oqxcRD6oKkKHzd5eTComu_YCFpUEdun5/view?usp=sharing' download>{resume}</a>
                 </div>
               </div>
             </motion.div>

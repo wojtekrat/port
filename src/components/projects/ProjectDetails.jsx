@@ -15,7 +15,7 @@ const ProjectDetails = ({ project: { name, image, about, link, tag} }) => {
       transition={{
         duration: 0.8,
         ease: 'easeIn'
-      }} className='flex flex-col p-[20px] md:p-[50px] mt-[50px] lg:max-w-[1200px] bg-neutral-800 rounded-[50px] '>
+      }} className='flex flex-col p-[20px] md:p-[50px] mt-[50px] lg:max-w-[1000px] bg-neutral-800 rounded-[50px] '>
         <div className='text-[22px] sm:text-[34px] font-bold typed-out2 underline decoration-green-600'>{name}</div>
         <div className='flex flex-col lg:flex-row mt-[20px] items-center justify-center lg:items-start'>
           <Image src={urlFor(image).url()} width={600} height={100} alt='project-image' className='w-[300px] h-[220px] sm:w-[350px] sm:h-[240px] lg:w-[600px] lg:h-[360px] rounded-3xl border-[1px] border-green-800'/>

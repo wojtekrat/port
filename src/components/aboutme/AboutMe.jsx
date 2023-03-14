@@ -55,7 +55,7 @@ const AboutMe = ({ text, image, skills, experience }) => {
               {text}
               <div className='mt-[10px]'>
                 <div className='bg-stone-500 p-[8px] w-fit m-auto rounded-xl cursor-pointer hover:bg-neutral-500 text-[13px] font-semibold'>
-                  {resume}
+                  <a href='assets/Wojciech_Ratajczak_-_Junior_Web_Developer.pdf' download>{resume}</a>
                 </div>
               </div>
             </motion.div>

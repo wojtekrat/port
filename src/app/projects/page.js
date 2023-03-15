@@ -2,12 +2,12 @@ import React from 'react'
 import { client } from '../../lib/client'
 import ProjectSection from '../../components/projects/ProjectSection'
 
-async function getProjects() {
+async function getProjects () {
   const res = await client.fetch('*[_type == "project"]')
   return res
 }
 
-export default async function Projects() {
+export default async function Projects () {
   const projects = await getProjects()
   projects.reverse()
   return (
@@ -16,4 +16,3 @@ export default async function Projects() {
     </div>
   )
 }
-

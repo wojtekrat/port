@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 'use client'
 import React from 'react'
 import Link from 'next/link'
@@ -5,12 +6,12 @@ import Image from 'next/image'
 import { urlFor } from '../../lib/client'
 import { motion } from 'framer-motion'
 
-const ProjectDetails = ({ project: { name, image, about, link, tag} }) => {
-    const tags = tag.split(" ")
+const ProjectDetails = ({ project: { name, image, about, link, tag } }) => {
+  const tags = tag.split(' ')
   return (
     <div className='flex items-center justify-center w-[90%] md:w-[70%] m-auto'>
       <motion.div animate={{
-        scale:[0.8, 1], 
+        scale: [0.8, 1]
       }}
       transition={{
         duration: 0.8,
@@ -20,12 +21,12 @@ const ProjectDetails = ({ project: { name, image, about, link, tag} }) => {
         <div className='flex flex-col lg:flex-row mt-[20px] items-center justify-center lg:items-start'>
           <Image src={urlFor(image).url()} width={600} height={100} alt='project-image' className='w-[300px] h-[220px] sm:w-[350px] sm:h-[240px] lg:w-[600px] lg:h-[360px] rounded-3xl border-[1px] border-green-800'/>
           <motion.div animate={{
-            opacity:[0,1]
+            opacity: [0, 1]
           }}
           transition={{
             duration: 1,
             delay: 0.5
-          }}   
+          }}
           className='pl-[20px] text-[18px] mt-[20px] lg:mt-[0px]'>{about}
           <Link href={link} className='mt-[20px] bg-stone-700 w-[120px] h-[30px] flex items-center justify-center hover:bg-stone-600 font-bold'>
             Demo

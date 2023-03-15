@@ -86,6 +86,6 @@ void main() {
   
     gl_Position = projectedPosition;
 }
-`;
+`
 
-export default vertexShader;
+export default vertexShader

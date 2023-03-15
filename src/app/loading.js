@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import React from 'react'
 import { Grid } from 'react-loader-spinner'
 
@@ -8,9 +8,9 @@ const Loading = () => {
         <div className='m-3 text-white text-xl text-center'>
             Wojtek is thinking...
             <div className='mt-2'>
-            <Grid 
-                height={150} 
-                width={150} 
+            <Grid
+                height={150}
+                width={150}
                 ariaLabel="grid-loading"
                 radius="12.5"
                 wrapperStyle={{}}
@@ -19,7 +19,6 @@ const Loading = () => {
             />
             </div>
         </div>
-        
     </div>
   )
 }

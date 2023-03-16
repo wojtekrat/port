@@ -6,6 +6,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const Experience = ({ experience: { company, duties, date, icon, jobtitle, link } }) => {
+  duties.split('.')
+  const d = duties.split('.')
   return (
     <div className='border-[1px] border-gray-500 m-[20px] p-[10px] w-[95%] rounded-xl flex flex-col flex-wrap hover:border-gray-400'>
         <div className='flex flex-col sm:flex-row justify-center items-center sm:items-start '>
@@ -20,7 +22,7 @@ const Experience = ({ experience: { company, duties, date, icon, jobtitle, link 
                         {company}
                     </p>
                     <div className='mt-[5px] flex flex-col items-start text-[15px] font-thin flex-wrap'>
-                        {duties}
+                        {d.map((d) => (<li key={d}>{d}</li>))}
                     </div>
                     <div className='flex flex-row relative mt-[5px]'>
                         <div className='text-[15px] text-gray-300'>

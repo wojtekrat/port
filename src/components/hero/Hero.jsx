@@ -7,8 +7,8 @@ import Socials from '../socials/Socials'
 // eslint-disable-next-line react/prop-types
 const Hero = ({ text, text1 }) => {
   return (
-    <div className="absolute top-0 left-0 bg-gradient-to-r from-zinc-900 via-stone-900 to-green-900 text-white w-full h-full ">
-      <div className='flex flex-col md:flex-row justify-center items-center mt-[150px] md:mt-[120px]'>
+    <div className="bg-gradient-to-r from-zinc-900 via-stone-900 to-green-900 text-white w-full h-screen mt-[-60px] ">
+      <div className='flex flex-col md:flex-row justify-center items-center pt-[150px] md:pt-[120px]'>
         <div>
           <div>
             <h1 className='text-[40px] lg:text-[60px] text-white typed-out'>

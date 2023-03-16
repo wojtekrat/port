@@ -28,7 +28,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/components/aboutme/Experience.jsx", "src/components/aboutme/AboutMe.jsx", "src/components/navbar/MenuButton.jsx"  ],
+, "src/components/aboutme/Experience.tsx", "src/components/aboutme/AboutMe.tsx", "src/components/navbar/MenuButton.jsx", "src/components/contact/ContactMe.jsx"  ],
   "exclude": [
     "node_modules"
   ]

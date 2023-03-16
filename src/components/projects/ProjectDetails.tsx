@@ -1,12 +1,28 @@
-/* eslint-disable react/prop-types */
 'use client'
-import React from 'react'
+import React, { FC } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { urlFor } from '../../lib/client'
 import { motion } from 'framer-motion'
 
-const ProjectDetails = ({ project: { name, image, about, link, tag } }) => {
+interface Project {
+  name: string
+  image: {
+    asset: {
+      _ref: string
+    }
+  }
+  about: string
+  link: string
+  tag: string
+}
+
+interface ProjectDetailsProps {
+  project: Project
+}
+
+const ProjectDetails: FC<ProjectDetailsProps> = ({ project }) => {
+  const { name, image, about, link, tag } = project
   const tags = tag.split(' ')
   return (
     <div className='flex items-center justify-center w-[90%] md:w-[70%] m-auto'>
@@ -19,7 +35,7 @@ const ProjectDetails = ({ project: { name, image, about, link, tag } }) => {
       }} className='flex flex-col p-[20px] md:p-[50px] mt-[50px] lg:max-w-[1000px] bg-neutral-800 rounded-[50px] '>
         <div className='text-[22px] sm:text-[34px] font-bold typed-out2 underline decoration-green-600'>{name}</div>
         <div className='flex flex-col lg:flex-row mt-[20px] items-center justify-center lg:items-start'>
-          <Image src={urlFor(image).url()} width={600} height={100} alt='project-image' className='w-[300px] h-[220px] sm:w-[350px] sm:h-[240px] lg:w-[600px] lg:h-[360px] rounded-3xl border-[1px] border-green-800'/>
+          <Image src={urlFor(image.asset._ref).url()} width={600} height={100} alt='project-image' className='w-[300px] h-[220px] sm:w-[350px] sm:h-[240px] lg:w-[600px] lg:h-[360px] rounded-3xl border-[1px] border-green-800'/>
           <motion.div animate={{
             opacity: [0, 1]
           }}

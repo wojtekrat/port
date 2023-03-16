@@ -1,19 +1,40 @@
 /* eslint-disable react/prop-types */
 'use client'
-import React from 'react'
-import { urlFor } from '../../lib/client'
-import Image from 'next/image'
-import SkillBox from './SkillBox'
-import { motion } from 'framer-motion'
-import Experience from './Experience'
+import React, { FC } from 'react';
+import { urlFor } from '../../lib/client';
+import Image from 'next/image';
+import SkillBox from './SkillBox';
+import { motion } from 'framer-motion';
+import Experience from './Experience';
 
-const AboutMe = ({ text, image, skills, experience }) => {
-  const resume = 'DOWNLOAD MY RESUME'
+interface ExperienceProps {
+  date: string;
+  company: string;
+  duties: string;
+  jobtitle: string;
+  icon: string;
+  link: string;
+}
+
+interface SkillProps {
+  skill: string;
+  skillimage: string;
+}
+
+interface AboutMeProps {
+  text: string;
+  image: string;
+  skills: SkillProps[];
+  experience: ExperienceProps[];
+}
+
+const AboutMe: FC<AboutMeProps> = ({ text, image, skills, experience }) => {
+  const resume = 'DOWNLOAD MY RESUME';
   return (
     <div className='w-[90%] md:w-[70%] m-auto flex flex-col'>
       <motion.div
         animate={{
-          y: [-100, 0]
+          y: [-100, 0],
         }}
         transition={{
           duration: 1,
@@ -33,10 +54,10 @@ const AboutMe = ({ text, image, skills, experience }) => {
             <motion.div
               animate={{
                 x: [400, 0],
-                opacity: [0, 1]
+                opacity: [0, 1],
               }}
               transition={{
-                duration: 2
+                duration: 2,
               }}
               className='text-[24px] md:text-[30px] font-bold underline decoration-stone-300'
             >
@@ -45,11 +66,11 @@ const AboutMe = ({ text, image, skills, experience }) => {
             <motion.div
               animate={{
                 opacity: 1,
-                y: [100, 0]
+                y: [100, 0],
               }}
               transition={{
                 opacity: 0,
-                duration: 2
+                duration: 2,
               }}
               className='text-[14px] md:text-[17px]'
             >
@@ -67,40 +88,44 @@ const AboutMe = ({ text, image, skills, experience }) => {
         <motion.div
           className='text-[20px] mb-[10px] md:mb-[0px] font-bold p-[20px] md:w-[50%] bg-neutral-900 rounded-3xl z-5'
           animate={{
-            y: [300, 0]
+            y: [300, 0],
           }}
           transition={{
             duration: 1,
-            ease: 'easeInOut'
+            ease: 'easeInOut',
           }}
         >
-          <div className='font-semibold'>My experience</div>
+          <div className='text-[20px] font-semibold mb-[10px]'>
+            My experience
+          </div>
           <div className='mt-[20px]'>
-            {experience.map((e) => (
+            {experience.map((e: ExperienceProps) => (
               <Experience key={e.date} experience={e} />
             ))}
           </div>
         </motion.div>
         <motion.div
-          className='md:w-[50%]  bg-neutral-900 p-[20px] rounded-3xl sm:ml-[10px]'
+          className='md:w-[50%] bg-neutral-900 p-[20px] rounded-3xl sm:ml-[10px]'
           animate={{
-            x: [300, 0]
+            x: [300, 0],
           }}
           transition={{
             duration: 1,
-            ease: 'easeInOut'
+            ease: "easeInOut",
           }}
         >
-          <div className='text-[20px] font-semibold mb-[10px] '>
+          <div className='text-[20px] font-semibold mb-[10px]'>
             My skillset
           </div>
           <div className='flex flex-row flex-wrap items-center justify-center'>
-            {skills.map((s) => (<SkillBox key={s.skill} skills={s}/>))}
+            {skills.map((s: SkillProps) => (
+              <SkillBox key={s.skill} skills={s} />
+            ))}
           </div>
         </motion.div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AboutMe
+export default AboutMe;

@@ -2,10 +2,10 @@
 import React, { useState } from 'react'
 import MenuButton from './MenuButton'
 
-const Navbar = () => {
-  const [showMenu, setShowMenu] = useState(false)
+const Navbar: React.FC = () => {
+  const [showMenu, setShowMenu] = useState<boolean>(false)
 
-  const handleMenuButtonClick = () => {
+  const handleMenuButtonClick = (): void => {
     setShowMenu(!showMenu)
   }
 

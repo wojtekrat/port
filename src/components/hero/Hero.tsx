@@ -1,11 +1,15 @@
 'use client'
-import React from 'react'
-import { Canvas } from '@react-three/fiber'
-import Blob from '../hero/Blob'
-import Socials from '../socials/Socials'
+import React, { FC } from 'react';
+import { Canvas } from '@react-three/fiber';
+import Blob from './Blob';
+import Socials from '../socials/Socials';
 
-// eslint-disable-next-line react/prop-types
-const Hero = ({ text, text1 }) => {
+interface HeroProps {
+  text: string;
+  text1: string;
+}
+
+const Hero: FC<HeroProps> = ({ text, text1 }) => {
   return (
     <div className="bg-gradient-to-r from-zinc-900 via-stone-900 to-green-900 text-white w-full h-screen sm:mt-[-60px] font-karla">
       <div className='flex flex-col md:flex-row justify-center items-center pt-[150px] md:pt-[120px]'>
@@ -31,7 +35,7 @@ const Hero = ({ text, text1 }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

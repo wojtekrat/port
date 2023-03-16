@@ -5,7 +5,7 @@ import MenuButton from './MenuButton'
 const Navbar: React.FC = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false)
 
-  const handleMenuButtonClick = (): void => {
+  const handleMenuButtonClick = () => {
     setShowMenu(!showMenu)
   }
 

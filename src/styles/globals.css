@@ -7,6 +7,14 @@
 .container{
   display: inline-block;
 }
+
+.font-bangers {
+  font-family: 'Tilt warp', cursive;
+}
+
+.font-russo {
+  font-family: 'Russo one', sans-serif;
+}
 .typed-out{
   overflow: hidden;
   white-space: nowrap;

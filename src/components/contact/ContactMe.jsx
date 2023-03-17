@@ -59,7 +59,9 @@ const ContactMe = () => {
         }}
         className='bg-neutral-800 h-fit w-fit p-5 rounded-xl z-8 sm:mb-[0px] relative'>
                 <div className='text-[30px] md:text-[40px]'>
+                  <h2 className='font-bangers'>
                     Contact me.
+                  </h2>
                 </div>
                 <div>
                     <form className='flex flex-col w-[300px]' ref={formRef} onSubmit={handleSubmit}>

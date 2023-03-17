@@ -31,7 +31,9 @@ const ProjectSection: React.FC<Props> = ({ projects }) => {
           }}
           className="text-[24px] sm:text-[26px] lg:text-[32px] font-bold underline decoration-stone-300"
         >
-          Projects
+          <h2 className='font-bangers'>
+            Projects.
+          </h2>
         </motion.div>
         <div className="text-[14px] sm:text-[16px] shadow-sm flex lg:w-[700px] flex-wrap">
           Following projects showcases my skills and experience through real-world examples of my work. Each project is briefly described with live demos. It shows my ability to solve problems and work with different technologies.

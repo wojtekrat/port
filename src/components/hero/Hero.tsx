@@ -11,7 +11,7 @@ interface HeroProps {
 
 const Hero: FC<HeroProps> = ({ text, text1 }) => {
   return (
-    <div className="bg-gradient-to-r from-zinc-900 via-stone-900 to-green-900 text-white w-full h-screen sm:mt-[-60px] font-karla">
+    <div className="bg-gradient-to-r from-zinc-900 via-stone-900 to-green-900 text-white w-full h-screen sm:mt-[-60px] font-bangers">
       <div className='flex flex-col md:flex-row justify-center items-center pt-[150px] md:pt-[120px]'>
         <div>
           <div>

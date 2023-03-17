@@ -61,7 +61,9 @@ const AboutMe: FC<AboutMeProps> = ({ text, image, skills, experience }) => {
               }}
               className='text-[24px] md:text-[30px] font-bold underline decoration-stone-300'
             >
-              About me
+              <h2 className='font-bangers'>
+                About me.
+              </h2>
             </motion.div>
             <motion.div
               animate={{
@@ -95,8 +97,10 @@ const AboutMe: FC<AboutMeProps> = ({ text, image, skills, experience }) => {
             ease: 'easeInOut',
           }}
         >
-          <div className='text-[20px] font-semibold mb-[10px]'>
-            My experience
+          <div className='text-[20px] mb-[10px]'>
+            <h3 className='font-bangers font-light'>
+              My experience.
+            </h3>
           </div>
           <div className='mt-[20px]'>
             {experience.map((e: ExperienceProps) => (
@@ -114,8 +118,10 @@ const AboutMe: FC<AboutMeProps> = ({ text, image, skills, experience }) => {
             ease: "easeInOut",
           }}
         >
-          <div className='text-[20px] font-semibold mb-[10px]'>
-            My skillset
+          <div className='text-[20px] mb-[10px]'>
+            <h3 className='font-bangers font-light'>
+              My skillset.
+            </h3>
           </div>
           <div className='flex flex-row flex-wrap items-center justify-center'>
             {skills.map((s: SkillProps) => (

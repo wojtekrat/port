@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 'use client'
 import React, { FC } from 'react';
 import { urlFor } from '../../lib/client';
@@ -14,6 +13,7 @@ interface ExperienceProps {
   jobtitle: string;
   icon: string;
   link: string;
+  delay: number;
 }
 
 interface SkillProps {
@@ -103,9 +103,16 @@ const AboutMe: FC<AboutMeProps> = ({ text, image, skills, experience }) => {
             </h3>
           </div>
           <div className='mt-[20px]'>
-            {experience.map((e: ExperienceProps) => (
-              <Experience key={e.date} experience={e} />
-            ))}
+          {experience.map((e: ExperienceProps, index: number) => (
+            <motion.div
+              key={e.date}
+              custom={index}
+              animate={{ y: [100, 0], opacity: [0, 1] }}
+              transition={{ duration: 1, delay: index * 0.2 }}
+            >
+              <Experience experience={e} delay={index * 0.2} />
+            </motion.div>
+          ))}
           </div>
         </motion.div>
         <motion.div

@@ -40,7 +40,7 @@ const AboutMe: FC<AboutMeProps> = ({ text, image, skills, experience }) => {
           duration: 1,
           ease: 'easeInOut'
         }}
-        className='flex flex-col lg:flex-row p-[20px] lg:p-[50px] bg-gradient-to-r from-green-900 via-green-700 to-green-900 min-h-[300px] rounded-b-3xl border-t-[2px] border-stone-700'
+        className='flex flex-col lg:flex-row p-[20px] lg:p-[50px] bg-gradient-to-r from-green-900 via-green-800 to-green-900 min-h-[300px] rounded-b-3xl border-t-[2px] border-stone-700'
       >
         <div className='flex flex-col items-center md:flex-row m-auto  '>
           <Image

@@ -29,7 +29,7 @@
 }
 
 .bg-gradient-to-r {
-  animation: gradient 14s ease infinite;
+  animation: gradient 24s ease infinite;
   background-size: 400% 400%;
 }
 .typed-out{

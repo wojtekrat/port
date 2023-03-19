@@ -1,9 +1,7 @@
-'use client'
 import React, { FC, useState } from 'react';
 import { urlFor } from '../../lib/client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 
 interface ExperienceProps {
   experience: {
@@ -13,11 +11,10 @@ interface ExperienceProps {
     icon: string;
     jobtitle: string;
     link: string;
-    delay?: number;
   };
 }
 
-const Experience: FC<ExperienceProps> = ({ experience: { company, duties, date, icon, jobtitle, link, delay } }) => {
+const Experience: FC<ExperienceProps> = ({ experience: { company, duties, date, icon, jobtitle, link } }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const d = duties.split('.');
 
@@ -26,11 +23,6 @@ const Experience: FC<ExperienceProps> = ({ experience: { company, duties, date, 
   }
 
   return (
-    <motion.div
-      animate={{ opacity: 1, y: [100, 0] }}
-      transition={{ duration: 1, delay }}
-      className='mb-[20px]'
-    >
     <div className="border-[1px] border-gray-500 m-[20px] p-[10px] w-[95%] rounded-xl flex flex-col flex-wrap hover:border-gray-400">
       <div className="flex flex-col items-center sm:flex-row sm:items-start ">
         <div className="min-w-[100px] h-[100px] p-[5px]">
@@ -81,7 +73,6 @@ const Experience: FC<ExperienceProps> = ({ experience: { company, duties, date, 
         </div>
       </div>
     </div>
-    </motion.div>
   );
 };
 

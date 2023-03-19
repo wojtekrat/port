@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 'use client'
 import React, { FC } from 'react';
 import { urlFor } from '../../lib/client';
@@ -13,7 +14,7 @@ interface ExperienceProps {
   jobtitle: string;
   icon: string;
   link: string;
-  delay: number;
+  delay?: number;
 }
 
 interface SkillProps {
@@ -40,7 +41,7 @@ const AboutMe: FC<AboutMeProps> = ({ text, image, skills, experience }) => {
           duration: 1,
           ease: 'easeInOut'
         }}
-        className='flex flex-col lg:flex-row p-[20px] lg:p-[50px] bg-gradient-to-r from-green-900 via-green-800 to-green-900 min-h-[300px] rounded-b-3xl border-t-[2px] border-stone-700'
+        className='flex flex-col lg:flex-row p-[20px] lg:p-[50px] bg-gradient-to-r from-green-900 via-green-700 to-green-900 min-h-[300px] rounded-b-3xl border-t-[2px] border-stone-700'
       >
         <div className='flex flex-col items-center md:flex-row m-auto  '>
           <Image
@@ -103,16 +104,9 @@ const AboutMe: FC<AboutMeProps> = ({ text, image, skills, experience }) => {
             </h3>
           </div>
           <div className='mt-[20px]'>
-          {experience.map((e: ExperienceProps, index: number) => (
-            <motion.div
-              key={e.date}
-              custom={index}
-              animate={{ y: [100, 0], opacity: [0, 1] }}
-              transition={{ duration: 1, delay: index * 0.2 }}
-            >
-              <Experience experience={e} delay={index * 0.2} />
-            </motion.div>
-          ))}
+            {experience.map((e: ExperienceProps) => (
+              <Experience key={e.date} experience={e} />
+            ))}
           </div>
         </motion.div>
         <motion.div
